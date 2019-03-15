@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập vào một số và kiểm tra xem đưa ra một số có phải là số nguyên dương</title>
+</head>
+<body>
+    <h4>hàm kiểm tra xem ký tự nhập vào có phải là so nguyen duong khong</h4>
+    <script>
+        execute();
+        function execute() {
+            var inp = parseInt(prompt('Nhap ki tu : '));
+            if(checkInt(inp)){
+                alert(inp + ' is TRUE !');
+            }
+            else {
+                alert(inp + ' is FALSE !')
+            }
+        }
+        function checkInt(data){
+            var flag = false;
+            if(Number.isInteger(data) && (data > 0)){
+                flag = true;
+            }
+            return flag ;
+        }
+    </script>
+</body>
+</html>

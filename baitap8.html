@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập vào mảng số bất kỳ và đảo ngược mảng</title>
+</head>
+<body>
+    <h5>Dao mang so nguyen</h5>
+    <input type="text" id="nhapSo">
+    <br/>
+    <br/>
+    <button id="nhapMang" onclick="nhapMang()">Nhap Mang</button>
+    <button id="daoMang" onclick="daoMang()">Dao mang</button>
+    <br/>
+    <br/>
+    Befor:
+    <br/>
+    <input type="text" id="result">
+    <br/>
+    <br/>
+    After:
+    <br/>
+    <input type="text" id="result1">
+    <script>
+        let nhapSo = [];
+        function nhapMang(){
+            let a = parseFloat(document.getElementById('nhapSo').value);
+            nhapSo.push(a);
+            document.getElementById('result').value = nhapSo;
+        }
+        function daoMang() {
+            let dao = nhapSo.length-1;
+            let change = 0;
+            let mangDao = [];
+            for(let i=0; i<nhapSo.length;i++){
+                change = nhapSo[i];
+                mangDao[dao-i] = change;
+            }
+            document.getElementById('result1').value = mangDao;
+            alert(mangDao);
+        }
+    </script>
+</body>
+</html>

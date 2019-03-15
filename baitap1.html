@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính bình phương một số</title>
+</head>
+<body>
+    <h4>Chuong Trinh Trinh Tinh Binh Phuong So Nhap Vao</h4>
+    <input id="nhapSo" type="text" oninput="execute()">
+    <input id="ketQua" type="text">
+    <script>
+        function execute() {
+            var nhapSo = parseInt(document.getElementById('nhapSo').value);
+            binhPhuong(nhapSo);
+        }
+        function binhPhuong(a) {
+            var binhPhuong = 0;
+            binhPhuong = a * a;
+            document.getElementById('ketQua').value = binhPhuong;
+            console.log(binhPhuong);
+        }
+    </script>
+</body>
+</html>

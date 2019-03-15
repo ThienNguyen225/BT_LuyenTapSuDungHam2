@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập vào 2 số và thực hiện đổi chổ hai số</title>
+</head>
+<body>
+    <h4>Nhập 2 số và đảo chỗ 2 số đó</h4>
+    <input type="text" id="so1">
+    <br/>
+    <input type="text" id="so2">
+    <br/>
+    <button id="button" onclick="doiSo()">Doi cho</button>
+
+    <script>
+        function doiSo() {
+            var so1 = parseFloat(document.getElementById('so1').value);
+            var so2 = parseFloat(document.getElementById('so2').value);
+            document.getElementById('so1').value = so2;
+            document.getElementById('so2').value = so1;
+        }
+    </script>
+</body>
+</html>

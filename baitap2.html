@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tích và chu vi hình tròn</title>
+</head>
+<body>
+    <h4>Chuong Trinh Chu Vi - Dien Tich hinh tron</h4>
+    Nhap ban kinh hinh tron: <input id="nhapSo" type="text" oninput="execute()">
+    <br/>
+    Chu Vi <input id="chuVi" type="text">
+    <br/>
+    Dien tich <input id="dienTich" type="text">
+    <br/>
+
+    <script>
+        const PI = 3.14;
+        function execute() {
+            var nhapSo = parseFloat(document.getElementById('nhapSo').value);
+            dienTich(nhapSo);
+            chuVi(nhapSo);
+        }
+        function dienTich(a) {
+            var dienTich = 0;
+            dienTich = a * a * PI;
+            document.getElementById('dienTich').value = dienTich;
+            console.log(dienTich);
+        }
+        function chuVi(a) {
+            var chuVi = 0;
+            chuVi = 2 * a * PI;
+            document.getElementById('chuVi').value = chuVi;
+            console.log(chuVi);
+        }
+    </script>
+</body>
+</html>
